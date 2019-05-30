@@ -58,5 +58,29 @@
       <p><b>Pets Allowed:</b> None</p>
       <p><b>Parking Spots:</b> 1</p>
     </div>
+
+    <div class="w3-center">
+      <!-- <p><input type="text" name="address2"></p> -->
+      <p>Express your interest below. Send a message to the lister!</p>
+      <textarea id="msging">
+      </textarea>
+      <div class="ISHide"><button onclick="sendMsg(this)" id="msgbutton">Send Message</button></div>
+    </div>
   </div>
+
 </div>
+
+<script>
+function sendMsg(bu) {
+    var mess = document.getElementById("msging");
+    if (bu.innerHTML == "Send Message") {
+        console.log("no");
+        bu.innerHTML = "Message Sent!";
+        bu.disabled = 'disabled';
+        mess.value = "";
+    }
+}
+</script>
+
+</body>
+</html>
