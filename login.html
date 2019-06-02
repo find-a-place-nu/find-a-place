@@ -8,13 +8,45 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/login.css">
+<script src="login.js"></script>
+
 <body>
 
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <a href="homelistings.html" class="w3-bar-item w3-button"><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">LOG <span class="w3-hide-small">IN</span></a>
-  </div>
-</div>
+  <h2 align="center">Welcome to Find A Place NU!</h2>
+  <div class="centertext"> Please register or log in to continue. </div>
+
+  <form method="post" action="submit" name="loginForm" id="login-form">
+    <div class="imgcontainer">
+      <img src="images/nu.png" alt="Avatar" class="avatar">
+    </div>
+
+    <output class="result" id="result" name="result"></output>
+
+    <input type="hidden" id="login" name="login_type" value="login">
+
+    <div class="marginradio"> <input type="radio" name="login_type" value="register"> Register<br>
+  <input type="radio" name="login_type" value="log-in"> Log in<br> </div>
+
+    <div class="container">
+      <label for="em"><b>Northwestern email</b></label>
+      <input type="text" placeholder="Enter Username" name="em" id ="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id ="psw" required>
+
+      <button class="submitbutton" id="submit" type="submit" value="Submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+
+  </form>
 
 <!-- Container (About Section)
 <div class="w3-content w3-container w3-padding-64" id="about">
