@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<title>Find a Place</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-right">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="homelistings.html" class="w3-bar-item w3-button w3-hide-small">FIND A PLACE</a>
+      <a href="makeyourlisting.html" class="w3-bar-item w3-button w3-hide-small">CREATE A LISTING</a>
+      <a href="myaccount.html" class="w3-bar-item w3-button w3-hide-small">MY ACCOUNT</a>
+      <a href="login.html" class="w3-bar-item w3-button w3-hide-small">LOG OUT</a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>-->
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="homelistings.html" class="w3-bar-item w3-button" onclick="toggleFunction()">FIND A PLACE</a>
+      <a href="makeyourlisting.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CREATE A LISTING</a>
+      <a href="myaccount.html" class="w3-bar-item w3-button" onclick="toggleFunction()">MY ACCOUNT</a>
+      <a href="login.html" class="w3-bar-item w3-button" onclick="toggleFunction()">LOG OUT</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">333 Davis</h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Carl Connersburg</b></p><br>
+      <img src="images/interior-3.jpg" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Super spacious two bedroom apartment you can rent for the summer. Lots of exposed brick!</p>
+      <p><b>Season of Availability:</b> Summer 2019</p>
+      <p><b>Type of Sublet:</b> Apartment</p>
+      <p><b>Address:</b> 333 Davis Street, Evanston, Illinois 60208</p>
+      <p><b>Air Conditioning:</b> Yes</p>
+      <p><b>Laundry:</b> Washer, Dryer</p>
+      <p><b>Number of Bedrooms:</b> 2</p>
+      <p><b>Number of Bathrooms:</b> 1</p>
+      <p><b>Pets Allowed:</b> Dogs</p>
+      <p><b>Parking Spots:</b> 1</p>
+    </div>
+
+    <div class="w3-center">
+      <!-- <p><input type="text" name="address2"></p> -->
+      <p>Express your interest below. Send a message to the lister!</p>
+      <textarea id="msging">
+      </textarea>
+      <div class="ISHide"><button onclick="sendMsg(this)" id="msgbutton">Send Message</button></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function sendMsg(bu) {
+    var mess = document.getElementById("msging");
+    if (bu.innerHTML == "Send Message") {
+        console.log("no");
+        bu.innerHTML = "Message Sent!";
+        bu.disabled = 'disabled';
+        mess.value = "";
+    }
+}
+</script>
+
+</body>
+</html>
