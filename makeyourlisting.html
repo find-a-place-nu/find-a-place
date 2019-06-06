@@ -8,6 +8,28 @@
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.okay {
+    display: flex;
+    justify-content: left;
+
+}
+.okay2 {
+  position:relative;
+  left: 100px;
+
+}
+.laundryP {
+  position:relative;
+  left: 136px;
+
+}
+.ParkP {
+  position:relative;
+  left: 154px;
+
+}
+</style>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -41,80 +63,96 @@
   <h3 class="w3-center">CREATE A LISTING</h3>
   <form>
     <div class="w3-row">
-      <div><p>Summary:
+      <div><p class="w3-center">Summary:
         <textarea id="msging">
         </textarea>
         </p>
       </div>
-      Season of Availability:<br>
     </div>
-    <div class="w3-row">
-      <input type="checkbox" name="Summer2019" value="Summer2019">Summer 2019<br>
-      <input type="checkbox" name="FallQuarter2019" value="FallQuarter2019">Fall Quarter 2019<br>
-      <input type="checkbox" name="WinterQuarter2020" value="WinterQuarter2020">Winter Quarter 2020<br>
-      <input type="checkbox" name="SpringQuarter2020" value="SpringQuarter2020">Spring Quarter 2020<br>
+    <div class="w3-row w3-section okay">
+      <div>Season of Availability:<br>
+        <input type="checkbox" name="Summer2019" value="Summer2019">Summer 2019<br>
+        <input type="checkbox" name="FallQuarter2019" value="FallQuarter2019">Fall Quarter 2019<br>
+        <input type="checkbox" name="WinterQuarter2020" value="WinterQuarter2020">Winter Quarter 2020<br>
+        <input type="checkbox" name="SpringQuarter2020" value="SpringQuarter2020">Spring Quarter 2020<br>
+      </div>
 
-      Type of Sublet:<br>
-      <input type="radio" name="subletType" value="apt">Apartment<br>
-      <input type="radio" name="subletType" value="house">House<br>
-      <input type="radio" name="subletType" value="other">Other<br>
+      <div class="okay2">Type of Sublet:<br>
+        <input type="radio" name="subletType" value="apt">Apartment<br>
+        <input type="radio" name="subletType" value="house">House<br>
+        <input type="radio" name="subletType" value="other">Other<br>
+      </div>
     </div>
 
-    <p>Address 1: <input type="text" name="address1"></p>
+    <!-- <p>Address 1: <input type="text" name="address1"></p>
     <p>Address 2: <input type="text" name="address2"></p>
-    <p>City, State, ZIP: <input type="text" name="address3"></p>
+    <p>City, State, ZIP: <input type="text" name="address3"></p>-->
+    Address 1:<br>
+    <input type="text" name="address1"><br>
+    Address 2:<br>
+    <input type="text" name="address2"><br>
+    City, State, ZIP:<br>
+    <input type="text" name="address3"><br>
 
     <p><u>Amenities</u></p>
-    Air Conditioning:<br>
-    <input type="radio" name="AC" value="yes">Yes<br>
-    <input type="radio" name="AC" value="no">No<br>
+    <div class="okay">
+      <div>Air Conditioning:<br>
+        <input type="radio" name="AC" value="yes">Yes<br>
+        <input type="radio" name="AC" value="no">No<br>
+      </div>
+      <div class="laundryP">
+        Laundry:<br>
+        <input type="checkbox" name="laundry" value="washer">Washer<br>
+        <input type="checkbox" name="laundry" value="dryer">Dryer<br>
+      </div>
+    </div>
+    <div class="okay">
+      <p>Number of Bedrooms:<br>
+      <select name="bedrooms">
+        <option value="NA" selected="selected">--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select></br></p>
 
-    Laundry:<br>
-    <input type="checkbox" name="laundry" value="washer">Washer<br>
-    <input type="checkbox" name="laundry" value="dryer">Dryer<br>
-
-    <p>Number of Bedrooms:<br>
-    <select name="bedrooms">
-      <option value="NA" selected="selected">--</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select></br></p>
-
-    <p>Number of Bathrooms:<br>
-    <select name="bathrooms">
-      <option value="NA" selected="selected">--</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>    </select></br>
-</p>
-
-    Pets Allowed:<br>
-      <input type="checkbox" name="pets" value="dogs">Dogs<br>
-      <input type="checkbox" name="pets" value="cats">Cats<br>
-      <input type="checkbox" name="pets" value="other">Other<br>
-
-    Parking Spots:<br>
-    <select name="parking">
-      <option value="NA" selected="selected">--</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option></select>
+      <p class="okay2">Number of Bathrooms:<br>
+      <select name="bathrooms">
+        <option value="NA" selected="selected">--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>    </select></br>
+      </p>
+    </div>
+    <div class="okay">
+      <div>Pets Allowed:<br>
+        <input type="checkbox" name="pets" value="dogs">Dogs<br>
+        <input type="checkbox" name="pets" value="cats">Cats<br>
+        <input type="checkbox" name="pets" value="other">Other<br>
+      </div>
+      <div class="ParkP">
+      Parking Spots:<br>
+      <select name="parking">
+        <option value="NA" selected="selected">--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option></select>
+      </div>
+    </div>
 <!--
     Season of Availability:<br>
     <input type="radio" name="ok" value="male">Male<br>
@@ -132,9 +170,9 @@
       <option value="Bananas">Bananas</option>
  -->
 
-  <p><a href="homelistings.html"><button class="w3-margin-bottom">Create Listing</button></a></p>
-  </form>
 
+  </form>
+  <p><a href="homelistings.html"><button class="w3-margin-bottom">Create Listing</button></a></p>
 </div>
 
 
