@@ -5,6 +5,8 @@ var users = [
   }
 ]
 
+/*
+
 document.addEventListener("DOMContentLoaded", setupForm);
 
 function setupForm(){
@@ -25,7 +27,51 @@ function handleSubmit(event){
   const processUser = login_type.value == "register" ? registerUser(em.value,psw.value) : loginUser(em.value,psw.value);
   const response    = processUser;
   result.innerHTML  = response;
-}//handleSubmit
+}//handle Submit for register
+*/
+
+document.addEventListener("DOMContentLoaded", setuploginForm);
+document.addEventListener("DOMContentLoaded", setupregisterForm);
+
+
+
+function setuploginForm(){
+    const form = document.getElementById("login-form");
+    form.addEventListener("submit", handleSubmit1);
+}//setupForm
+
+function setupregisterForm(){
+    const form = document.getElementById("register-form");
+    form.addEventListener("submit", handleSubmit);
+}//setupForm
+
+function handleSubmit(event){
+    event.preventDefault();
+
+  const {
+      em,
+      psw,
+      result
+  } = event.target;
+
+  const processUser = registerUser(em.value,psw.value);
+  const response    = processUser;
+  result.innerHTML  = response;
+}//handle Submit for register
+
+function handleSubmit1(event) {
+  event.preventDefault();
+
+  const {
+    em,
+    psw,
+    result
+  } = event.target;
+
+  const processUser = loginUser(em.value,psw.value);
+  const response = processUser;
+  result.innerHTML = response;
+}//hande Submit for login
 
 function registerUser(em, psw){
     users.push({email : em, password : psw});

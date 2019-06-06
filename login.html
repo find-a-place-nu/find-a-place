@@ -16,6 +16,8 @@
   <h2 align="center">Welcome to Find A Place NU!</h2>
   <div class="centertext"> Please register or log in to continue. </div>
 
+  <!--
+
   <form method="post" action="submit" name="loginForm" id="login-form">
     <div class="imgcontainer">
       <img src="images/nu.png" alt="Avatar" class="avatar">
@@ -27,6 +29,54 @@
 
     <div class="marginradio"> <input type="radio" name="login_type" value="register"> Register<br>
   <input type="radio" name="login_type" value="log-in"> Log in<br> </div>
+
+    <div class="container">
+      <label for="em"><b>Northwestern email</b></label>
+      <input type="text" placeholder="Enter Username" name="em" id ="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id ="psw" required>
+
+      <button class="submitbutton" id="submit" type="submit" value="Submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+
+  </form>
+
+-->
+
+<form method="post" action="submit" name="registerForm" id="register-form">
+  <div class="imgcontainer">
+    <img src="images/nu.png" alt="Avatar" class="avatar">
+  </div>
+
+  <output class="result" id="result" name="result"></output>
+
+  <div class="container">
+    <label for="em"><b>Northwestern email</b></label>
+    <input type="text" placeholder="Enter Username" name="em" id ="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id ="psw" required>
+
+    <button class="submitbutton" id="submit" type="submit" value="Submit">Register</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
+    </label>
+  </div>
+
+</form>
+
+  <form method="post" action="submit" name="loginForm" id="login-form">
+
+    <output class="result" id="result" name="result"></output>
 
     <div class="container">
       <label for="em"><b>Northwestern email</b></label>
