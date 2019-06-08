@@ -1,6 +1,7 @@
 .centertext {
   text-align: center;
   margin: auto;
+  align-items: flex-start;
 }
 
 .marginradio {
@@ -48,6 +49,11 @@ button:hover {
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
+}
+
+.enter-info {
+  display: flex;
+  flex-direction: row;
 }
 
 img.avatar {
